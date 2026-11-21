@@ -2,7 +2,7 @@
 // It gathers the playable game and its screenshots into the output folder
 // and asks the vendored dossier library to describe them for the judge.
 
-import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { buildDossier } from "./vendor/makefun-game.ts";
 
@@ -20,7 +20,6 @@ function requireFolder(path, label) {
 requireFolder(gameSource, "game");
 requireFolder(shotsSource, "screenshots");
 
-rmSync(outputDir, { recursive: true, force: true });
 mkdirSync(join(outputDir, "game"), { recursive: true });
 mkdirSync(join(outputDir, "screenshots"), { recursive: true });
 
