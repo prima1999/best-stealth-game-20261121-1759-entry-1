@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Whisper Gallery — a night-museum stealth heist</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #0b0f1a; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: sans-serif; }
+  canvas { display: block; width: 1280px; height: 800px; max-width: 100vw; max-height: 100vh; background: #141824; }
+  .hint { position: fixed; left: 12px; bottom: 10px; color: #64748b; font-size: 12px; }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="800"></canvas>
+<p class="hint">Whisper Gallery — WASD / arrows to move, Shift to sneak, Space to sprint, click to walk, P to pause.</p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
